@@ -1,0 +1,122 @@
+.task {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    touch-action: none;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .task:hover {
+    background-color: #e6f2f0;
+  }
+  
+  .drag-handle {
+    cursor: grab;
+    font-size: 18px;
+    user-select: none;
+  }
+  
+  .drag-handle:active {
+    cursor: grabbing;
+  }
+  
+  .task-title {
+    flex-grow: 1;
+    font-size: 16px;
+    word-break: break-word;
+  }
+  
+  .task-input {
+    flex-grow: 1;
+    border: 2px solid #4F959D;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .edit-button,
+  .delete-button {
+    border-radius: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-button {
+    background: none;
+    border: 1px solid #4F959D;
+    color: #4F959D;
+  }
+  
+  .edit-button:hover {
+    background-color: #4F959D;
+    color: white;
+  }
+  
+  .delete-button {
+    background: none;
+    border: 1px solid red;
+    color: red;
+  }
+  
+  .delete-button:hover {
+    background-color: red;
+    color: white;
+  }
+  
+
+  @media (max-width: 768px) {
+    .task {
+      padding: 12px;
+      gap: 8px;
+    }
+  
+    .task-title {
+      font-size: 14px;
+    }
+  
+    .task-input {
+      font-size: 14px;
+      padding: 4px;
+    }
+  
+    .edit-button,
+    .delete-button {
+      padding: 4px 6px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .task {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding: 10px;
+    }
+  
+    .task-title {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    .task-input {
+      width: 100%;
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    .edit-button,
+    .delete-button {
+      width: 100%;
+      text-align: center;
+      padding: 6px;
+    }
+  }
+  
