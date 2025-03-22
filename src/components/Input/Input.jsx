@@ -18,6 +18,7 @@ export const Input = ({ onSubmit }) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
+        placeholder="Enter Task Here"
       />
       <button onClick={handleSubmit} className="button">
         Add
